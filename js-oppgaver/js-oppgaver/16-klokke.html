@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/js-hjemeside-scc.css">
+
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <title>enkel klokke</title>
+</head>
+<body><br>
+    <li><a href="/html/arbeidsgiver netside/hovedSide_tilArbeidsGiver_index.html">Hjem</a></li></li><br>
+    <div id="klokke"></div>
+    <script>function visTid(){
+        let naa = new Date();
+        let tid = naa.toLocaleTimeString();
+        document.getElementById("klokke").innerHTML = tid;
+    //console.Log(tid);
+    }
+    //visTid();
+    setInterval(visTid,100);
+    </script>
+</body>
+</html>

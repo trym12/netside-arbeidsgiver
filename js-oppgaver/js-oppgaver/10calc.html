@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enkel kalkulator</title>
+    <link rel="stylesheet" href="/arbeidsgiver netside css/hovedside.css">
+    <link rel="stylesheet" href="/arbeidsgiver netside css/js-hjemeside-scc.css">
+
+</head>
+<body>
+    <li><a href="/html/arbeidsgiver netside/hovedSide_tilArbeidsGiver_index.html">Hjem</a></li></li><br><br>
+        <form action="">
+        tall1: <input type="number" id="tall1"> <br>
+        tall2: <input type="number" id="tall2"> <br>
+        <button onclick = "beregn()">Beregn</button>
+    </form>
+    <!--enkel kalkulator 2-->
+    <h3>skriv inn to tall og klikk på en knapp nedenfor</h3>
+    <input type="text" id="x" placeholder="skriv inn et tall">
+    <input type="text" id="y" placeholder="skriv inn et tall">
+    <button onclick = "sum()">Summere</button>
+    <button onclick = "minus()">Minus</button>
+    <button onclick = "dele()">Dele</button>
+    <button onclick = "gange()">Gange</button>
+
+    <div id="z"></div>
+
+</body>
+<script>
+    function beregn() {
+    var tall1 = Number(document.getElementById("tall1").value);
+    var tall2 = Number(document.getElementById("tall2").value);
+
+    var sum = tall1 + tall2;
+    var prod = tall1 * tall2;
+    var dif = tall1 - tall2;
+    var kvot = tall1 / tall2;
+    alert('summen er:' + sum + 'productet er: ' + prod + ' differansen er:' + dif + ' kvotienten er:' + kvot)
+    }
+
+
+    //enkel kalkulator 2
+    var x, y, resultat;
+    // her lager vi en function for og hente in de to tallene
+    function settverdi() {
+    x = Number(document.getElementById("x").value);
+    y = Number(document.getElementById("y").value);
+    }
+
+    //her lager vi en functioton som sumerer tallene
+    function sum() {
+        settverdi();
+        resultat = x + y;
+        z.innerHTML += "summen er:" + resultat + "<br>";
+    }
+    //lage en function som trekker fra y verdien
+    function minus() {
+        settverdi();
+        resultat = x - y;
+        z.innerHTML += "summen er:" + resultat + "<br>";
+    }
+    //her lager vi en function som ganger de to tallene
+    function gange() {
+        settverdi();
+        resultat = x * y;
+        z.innerHTML += "summen er:" + resultat + "<br>";
+    }
+    //her laget vi en function for og dele
+    function dele() {
+        settverdi();
+        resultat = x / y;
+        z.innerHTML += "summen er:" + resultat + "<br>";
+    }
+
+
+</script>
+</html>

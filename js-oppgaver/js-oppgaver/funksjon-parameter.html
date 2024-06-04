@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="/js-oppgaver/js_Scriptene/js_til_funksjon-parameter.js"defer></script>
+   <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+   <link rel="stylesheet" href="../arbeidsgiver netside css/js-hjemeside-scc.css">
+
+
+    <title>Metode Og Funksjoner</title>
+</head>
+<body>
+   
+   
+    <h1>Funksjon og metoder</h1>
+    <li><a href="/html/arbeidsgiver netside/hovedSide_tilArbeidsGiver_index.html">Hjem</a></li>
+    <p>funksjoner bruker for å uttrykke sammenhenger. De dukker opp nesen uansett hva vi driver med.</p>
+    <p>Vi kan tenke på en funksjon som en regel som tar inn noe oggir noe annet ut.</p>
+    <p>En enkel funksjon:  5 * c = b  </p>
+    <p>Matematikk regler: Først skal vi gange, så skal vi dele</p>
+    <p>Har vi paranteser, skal disse regnes ut først</p>
+    <form action="">
+    <input type="text" name="" id="tall5" placeholder="Skrive inn et tall">
+    <input type="button" value="Bereng tall" onclick="bereng5()">
+    </form>
+    <p id = "Svar5"></p>
+ 
+    <h3>RenteFunksjon</h3>
+    <p>Vi kan benytte en funksjone for å berenge hvor mye vi får ved å sette inn penger i banken.</p>
+    <p>Vi må bestemme hvor stor innskuddet skal være.</p>
+    <pre>
+        innskudd: <input type="text" id="is" placeholder="innskudd">
+        Rentesats: <input type="text" id="r" placeholder="Rentesats">
+        Antall år: <input type="text" id="aar" placeholder="antall">
+        <input type="button" value="beregn beløp" onclick="bereng()">
+    </pre>
+    <p id="svar7"></p>
+
+
+    
+    <h3>tekst som parameter til en funksjon</h3>
+    <p>Vi kan sende med tekst til en funksjon og få disse parameterne
+        (verdier) skrevet ut.
+    </p>
+    <p>vi lager to felt for og sende med fornavn og ettternavn.
+        Disse sender vi til en funksjon som får skrevet ut navnene.
+    </p>
+    <pre>
+        <input type="text" id="fnavn" placeholder="skriv in fornavn">
+        <input type="text" id="enavn" placeholder="skriv in etternavn">
+        <button onclick="res()" id="tek">tøm skjema</button>
+    </pre>
+    <input onclick="add()" type="button" value="Legg til skoleelev">
+    <p id="svar6"></p>
+</body>
+</html>
