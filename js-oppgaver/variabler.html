@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variabeler</title>
+    <script src="/js-oppgaver/js_Scriptene/variabel.js" defer></script>
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/js-hjemeside-scc.css">
+    <style>
+        li a {
+            background-color: blue;
+            text-decoration: none;
+           color: white;
+           padding: 1%;
+           border-radius: 5px;
+        }
+        li :hover {
+            background-color: red;
+        }
+        li { list-style: none;}
+    </style>
+   
+</head>
+<body>
+    <h1>variabel</h1>
+    <li><a href="/html/arbeidsgiver netside/hovedSide_tilArbeidsGiver_index.html">Hjem</a></li>
+    <p>En variabel er noe som er foranderlig, den kan endres</p>
+    <p>f.eks. er alder en variabel.</p>
+    <p>høyde er en variabel.</p>
+    <p>kjønn er en variabel.</p>
+    <p>Nina er a år --> var alder = a</p>
+    <p>Marthe er a år --> let alder = a</p>
+    <p>knyut er a år --> let alder = a</p>
+    <p>Til sammen er de a + a + a = x</p>
+    <p>De er a + b + c = X</p>
+    <p>De er adler1 + alder2 + alder3 = X</p>
+    <div id="sum">sum</div>
+</body>
+<script defer>
+    let handlesum = (230 + 130 + 430 + 120 + 150 + 730);
+    //alert("handlesum er: " + handlesum + "kr");
+    sum.innerHTML += ("handlesum er: " + handlesum + "kr");
+</script>
+</html>

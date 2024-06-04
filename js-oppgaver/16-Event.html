@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/js-hjemeside-scc.css">
+    <script src="/js-oppgaver/js_Scriptene/events.js" defer></script>
+
+<script>
+    
+
+</script>
+</head>
+<body onload="startTime()">
+<!--Får funksjonen startTime() til å starte når siden åpnes-->
+
+<h1>Innføring i programmering med <br> Trym H. merkesdal</h1>
+<li><a href="/html/arbeidsgiver netside/hovedSide_tilArbeidsGiver_index.html">Hjem</a></li>
+<div id="dag"></div>
+<br>
+<div id="klokke"></div>
+<br>
+<div id="dag2"></div>
+<button onclick="uke()">Vis ukedag</button>
+<div id="udag"></div>
+
+
+<p id="rødtekst">i databehandling er events (hendelse), en handling eller forekomst som blir gjenkjent av programmet og som kan håndteres av programmet.
+Typiske events håndteres synkront med programmets flyt. Dvs. at programmet har en eller flrere dedujerte steder hvor events håndteres, ofte en event loop.
+Typiske kilder tul events inkluderer evets som "trykk på en tast" på tastaturet (tastetrykk), eller klikker med musepekeren, eller peker med musepekeren.
+En annen kilde er eb maskinvareenhet 
+</p>
+<h2>Events som MouseOver og MouseOut</h2>
+<p onmouseover="this.style.color = 'red'" onmouseout="this.style.color = 'lightgreen'">Hendelser som i en function av HTML-documenter (som fines i andre programeringsspråk også)
+     som tilater de som lager websiden å legge til interakrivitet mellom nettstedene og dets besøkende. Dette gjøres ved å legge events inn i HTML-tagen 
+    som aktiveres ved en handling. F.eks. kan vi lage et avsnitt som endrer farge på denne teksten. Denne teksten blir rød ved å peke med musepeker
+på teksten og blir lightgreen nor musepekeren flytes bort fra teksten</p>
+
+<h2>event onkeyup</h2>
+<p>En funksjonen ut løses nor brukeren slipper en tast i intastningsfeltet.vi kan sette at små bokstaver skal forvandles til store bokstaver.</p>
+
+<input type="text" id="navn" onkeyup="storeBokstaver()"></input>
+<p>Vi kan utvide denne functionen til at vi skriver på siden.Vi lager en "output-tag" som vi kan skrive i.
+</p>
+
+<div id="skrivUtPåSiden">
+</div>
+
+<h2>klokke</h2>
+<p>En enkel fom for events er å få frem dagens dato. Da benytter vi en knapp og den innebygede function Date().</p>
+<p id="dato"></p>
+<button onclick="getElementById('dato').innerHTML = Date()">Dagen idag og klokken er nå?</button>
+
+</body>
+<script>
+    
+</script>
+</html>

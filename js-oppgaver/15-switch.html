@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/js-hjemeside-scc.css">
+</head>
+<body>
+    <h1>Innføring i programenring med <br> Trym h. merkesdal</h1>
+    <h2>Switch</h2>
+    <li><a href="/html/arbeidsgiver netside/hovedSide_tilArbeidsGiver_index.html">Hjem</a></li>
+    <p>i elektronik er en switch (bryter) en elektrisk komponent som bryter en elektrisk krets, 
+        avbryter når vedende eller avlede den fra en leder til en annen leder.</p>
+
+    <p>En switch kan være direkte manipulert av et meneske som et styrings signal til et system slik som en tastatur knapp, 
+        eller for å styre strøm flyten i en krets, slik som i en lysbryter.</p>
+
+    <p>Automatiske opererte switcher (bryter) kan brukes til å styre bevegelser av maskine. se også transistorer!</p>
+
+    <p>Denne betydeningen er overført til dataprogramerignsspråk som JavaScript, der en switcher et statment (switch/bryter uttalelse).
+        Switch brukes som en type kontrollmekanisme for valg som avendes av den tilatte verdien av en vareabel eller et uttrykk, 
+        for å endre kontrollflyten av et program som skjøres via en sekvens med flere stier, ruter eller kanaler.
+        se <a href="http://www.w3schools.com/js/js_date_methods.asp">switch</a>
+    </p>
+    <br>
+    <button onclick="dag()">fin dagens dag</button> <br>
+    <div id="ukedag"></div>
+
+    <h2>Månede</h2>
+    <div id="gyk">
+        <input type="text" id="inn" placeholder="Skriv in måned">
+        <button id="dager" onclick="dMoned()">Fin antal dager</button>
+        <br>
+        <output  id="out14"></output>
+        <p></p>
+    </div>
+</body>
+
+<script>
+//hente inn input (måned)
+let dager = document.getElementById("dager");
+// Lage en function som skal finne antall dager
+    function finndager() {
+        let oppgave = document.getElementById("gyk");
+        let mnd = document.getElementById("inn");
+        let out14 = document.getElementById("out14");
+    //Lage de ulike caseene for månedene som switch skal velge mellom
+    switch(mnd.value.toLowerCase()) {
+        case "januar": out14.value = 31;
+        case "1": out14.innerHTML = ("Januar har " + 31 + "dager");
+        break;
+        case "februar": out14.value = 28;
+        case "2": out14.innerHTML = ("Februar har " + 28 + "dager");
+        break;
+        case "mars": out14.value = 31;
+        case "3": out14.innerHTML = ("Mars har " + 31 + "dager");
+        break;
+        case "april": out14.value = 30;
+        case "4": out14.innerHTML = ("April har " + 30 + "dager");
+        break;
+        case "mai": out14.value = 31;
+        case "5": out14.innerHTML = ("Mai har " + 31 + "dager");
+        break;
+        case "juni": out14.value = 30;
+        case "6": out14.innerHTML = ("Juni har " + 30 + "dager");
+        break;
+        case "juli": out14.value = 31;
+        case "7": out14.innerHTML = ("Juli har " + 31 + "dager");
+        break;
+        case "august": out14.value = 31;
+        case "8": out14.innerHTML = ("August har " + 31 + "dager");
+        break;
+        case "september": out14.value = 30;
+        case "9": out14.innerHTML = ("September har " + 30 + "dager");
+        break;
+        case "oktober": out14.value = 31;
+        case "10": out14.innerHTML = ("Oktober har " + 31 + "dager");
+        break;
+        case "november": out14.value = 30;
+        case "11": out14.innerHTML = ("November har " + 30 + "dager");
+        break;
+        case "desember": out14.value = 31;
+        case "12": out14.innerHTML = ("Desember har " + 31 + "dager");
+        break;
+
+        default: out14.value = ("Feil skrevet, eller så er det ingen måned");
+        break;
+        
+    }
+    }
+    dager.addEventListener("click", finndager);
+
+    
+    function dag() {
+        let ukedag = document.getElementById("ukedag");
+        let day;
+            switch (new Date().getDay()) {
+                case 0:
+                day = "Søndag";
+                break;
+                case 1:
+                day = "Mandag";
+                break;
+                case 2:
+                day = "Tirsdag";
+                break;
+                case 3:
+                day = "Onsdag";
+                break;
+                case 4:
+                day = "Torsdag";
+                break;
+                case 5:
+                day = "Fredag";
+                break;
+                case 6:
+                day = "Lørdag";
+                break;
+            }
+            ukedag.innerHTML = "I dag er det " + day;
+
+    }
+</script>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array og utskrift av array</title>
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/js-hjemeside-scc.css">
+
+</head>
+<body>
+	<h1>2Dim Array</h1>
+            
+    <li><a href="/html/arbeidsgiver netside/hovedSide_tilArbeidsGiver_index.html">Hjem</a></li>
+        <a name="#">
+            <h3>Array og utskrift av array</h3>
+			<p>Innenfor informatikken er en datastruktur en måte å organisere data på i en datamaskin.
+			Ved behandling av store datamengder er det en nødvendighet å bruke gode datastrukturer,
+			Mange ganger vil det bli benyttet lister (Array) til å ta vare på informasjon.
+			Noen ganger vil vi også måtte ha lister inne i en liste, såkalte "todimensjonale liser".
+			Fra siden om datastrukturer og Array, viste vi eksempler på en liste med noen navn</p>
+										
+			<p>Eksempel på en liste (array); let list = ["Nina", "Gunnar", "Alex", "Benedicte", "Tove",
+                "Frida", "Karoline", "Kristin"];</p>
+			<p>For alle lister benytter vi hakeparenteser [ ] og opplysningene i listen skiller vi med komma. 
+			Hver enkelt opplysning eller informasjon må stå i doble " " eller enkle ' ' apostrofer.</p>
+			<p>Vi kan skrive ut denne listen med navn ved å benytte en for løkke</p>
+			<p>Løkken må da gå igjennom listen for å hente hvert enkelt navn</p>
+			<p>Vi benytter da variablen i for å flytte seg i listen og hente det enkelte navnet</p>
+			<p>i må starte på 0 (null) og i må øke med en for å kunne flytte seg en plass lengere mot høyre,
+			derfor benytter vi i++</p>
+			<p>Samtidig må vi sørge for at denne "flytte variabelen" stopper når listen er "ferdig",
+			dvs. at det ikke er flere navn i listen.</p>
+			<p>Dette gjør vi ved at vi setter i  mindre enn lengden på listen og vi trenger ikke vite hvor lang listen er.</p>
+			<p> Syntaxen for dette er: i < liste.length;</p>
+
+    <p>Skrive ut hele listen</p>
+    <button onclick="listeFunc()">Skriv ut navn</button>
+    <p id="list"></p><br><br>
+    
+
+<script>
+    //henter element for å skrive ut listen
+    var p1 =document.getElementById("list");
+
+    //Lager en liste
+    let list = ["Nina", "Gunnar", "Alex", "Benedicte", "Tove",
+         "Frida", "Karoline", "Kristin"];
+    
+    function listeFunc() {
+        for(let vetIkke = 0; vetIkke < list.length; vetIkke++) {
+            p1.innerHTML += list[vetIkke] + "<br>";
+        }
+    }
+</script>
+
+    <h3>To dimensjonale array eller Nestede løkker</h3>
+        <p>Denne listen kan vi utvide, til å legge mer informasjon til de enkelte navnene,
+        f.eks. etternavn, bosted og avdeling de jobber i. 
+        Dvs. at vi kan lage en ny liste for hver posisjon i arrayen.</p>
+        <p>Vi kan lage en liste over de lærerne 1IMA har i år i progranfagene.
+            Vi legger til fornavn, etternavn, bosted, og "tittel"
+        </p>
+        <h3>Listen i listen (to dimensjonal array) blir da;</h3>
+        
+        <p>
+            let list2 = [ ["Mari", "Andersen", "Nes", "lektor"],
+                        ["Oddvar", "Kjelseth", "Nannestad", "lektor"],
+                        ["Erlend", "Jørgense", "Nannestad", "lektor"],
+                        ["Martine", "Hovin", "Oslo", "lærer"],
+                        ["Vidar", "Rasmussen", "Jessheim", "lektor"] ];
+        </p>
+        <p>I listen ser vi at de ulike dataene eller informasjonene ligger 
+            på en fast plass i de indre listene.</p>		
+		<p>Ved lister i programmering begynner bestandig listen på plass 0 (null),
+             Her vil plass 0 (null) inneholde en liste om Mari, 
+             plass 1 vil inneholde en liste om Oddvar,
+              plass 2 vil inneholde en liste om Erlend,
+              plass 3 vil inneholde en liste om Martine,
+              plass 4 vil inneholde en liste om Vidar,
+              Slik kan vi fortsette og utvide listen, men i Dette
+              eksemplet stopper vi her.</p>
+				
+			<p>Om vi ønsker å skrive ut all informasjon om alle ansatte 
+                så må vi gå igjennom listen med en løkke. 
+                I tillegg må vi gå igjennom den indre listene med en løkkke
+                 som ligger inne i den første løkken. 
+                 Dermed må vi lage en todimosjonal løkke</p>
+			<br />
+			
+			<p>Vi kan forklare nestede løkker ved at vi utfører en handling
+                 på et dataområde flere ganger,	eller på flere dataområder. 
+            </p> 
+            <p>Vi kan sammenligne nestede løkker med jordkloden som går i bane
+                 rundt solen. Én runde rundt solen er ett år, 
+                 og det kan sammenlignes med den ytre løkken.
+			Én gang rundt jordens egen akse som utgjør én dag, 
+            kan sammenlignes med den indre løkken som er nestet i den ytre løkken.
+			For hvert år finnes det 365 indre løkker 
+            (i vårt eksempel har vi 5 indre løkker.), 
+            og hver 1. januar gjentas den ytre løkken.</p>
+
+<h3>Vi lager en knapp som vi kan klikke på, for å få skrevet
+    ut listen over programfaglærere.
+</h3>
+
+<button onclick="list2Func()">Skriv ut informasjonen</button>
+<p id="list2"></p><br><br>
+
+<script>
+    //hente element for å skrive ut listen
+    let p3 = document.getElementById("list2");
+
+    //Lager en todimensjonal array, dvs. en liste i en liste
+    let list2 = [ ["Mari", "Andersen", "Nes", "lektor"],
+    ["Oddvar", "Kjelseth", "Nannestad", "lektor"],
+    ["Erlend", "Jørgense", "Nannestad", "lektor"],
+    ["Martine", "Hovin", "Oslo", "lærer"],
+    ["Vidar", "Rasmussen", "Jessheim", "lektor"] ];
+
+    function list2Func() {
+        for(let p2 = 0; p2 < list2.length; p2++) {
+            p3.innerHTML += "Navn: " + list2[p2][0] + " " + list2[p2][1] + " "
+        + "Bosted:" + " " + list2[p2][2] + " "
+        + "Jobbtitel:" + " " + list2[p2][3] + " " + "<br>";
+        }
+        
+    }
+</script>
+
+
+<p>I noen tilfeller vil det kunne være en liste med data som vi vet lite
+     om. Dvs. at vi ikke kjenner til hvilke data som ligger hvor i den 
+     indre listen eller hvor lang denne er.</p>
+    <p>Da kan vi skrive ut all data for å se hvilken informasjon
+     som ligger der. For å gjøre dette, må vi gå igjennom alle elementer
+      i list2 og alle elementer i den indre arrayen.</p>
+    <p>Vi benytter da "variabelteller" i for den første arrayen og
+         j for den andre arrayen</p>
+    <button onclick="ukjentListe()">Skriv ut ukjent liste</button>
+    
+    <p id="list4"></p>
+
+    <script>
+        
+            
+        let list4 = [
+    ["Mari", "Andersen", "Nes", "lektor"],
+    ["Oddvar", "Kjelseth", "Nannestad", "lektor"],
+    ["Erlend", "Jørgense", "Nannestad", "lektor"],
+    ["Martine", "Hovin", "Oslo", "lærer"],
+    ["Vidar", "Rasmussen", "Jessheim", "lektor"], // Legg merke til kommaet her
+    ["Merek", "Cooper", "Nannestad", "lektor"], // og her
+    ["Irene", "Sandholt", "Nannestad", "Adjunkt"]
+];
+
+    var p4 = document.getElementById("list4");
+            function ukjentListe() {
+            for(var i = 0; i < list4.length; i++){
+            // for hvert element i ansatt går vi igjennom alle elementer i denne posisjonen
+            // ansatt[i]
+            for(var j = 0; j < list4[i].length; j++){
+                //skriver ut hvert element i den indre arrayen ansatt[i][j]
+                p4.innerHTML += list4[i][j] +  '<br>';
+            }
+            // For oversiktens skyld skriver vi ut et ekstra linjeskift mellom hver ansatt
+            p4.innerHTML += '<br>';
+        }
+        }
+        
+    </script>	
+
+
+
+</body>
+
+</html>

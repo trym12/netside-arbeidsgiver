@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="../arbeidsgiver netside css/11calculator.css">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/js-hjemeside-scc.css">
+
+
+</head>
+<body>
+    <h1>innføring i programerign med <br>Trym Hauge Merkesdal.</h1>
+    <li><a href="/html/arbeidsgiver netside/hovedSide_tilArbeidsGiver_index.html">Hjem</a></li>
+        <div id="calculator">
+    <!--skjerm-->
+    <div class="top">
+        <div class="screen"></div>
+    </div>
+    <br>
+    <div class="kyes">
+        <!--operatorer, tall og clear knapp-->
+        <span>7</span>
+        <span>8</span>
+        <span>9</span>
+        <span class="operator">+</span>
+        <span>4</span>
+        <span>5</span>
+        <span>6</span>
+        <span class="operator">-</span>
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span class="operator">/</span>
+        <span>0</span>
+        <span>.</span>
+        <span class="eval">=</span>
+        <span class="operator">x</span>
+        <span class="clear">C</span>
+    </div>
+    </div>
+
+</body>
+
+<script>
+    //henter alle knappene fra documentet
+    var keys = document.querySelectorAll('#calculator span');
+    var operators = ['+', '-', '/', 'x'];
+    var decimalAdded = false;
+
+    // all on click event to all keys og operatorene
+
+    for(var i = 0; i < keys.length; i++) {
+        keys[i].onclick = function(e) {
+            // få tak i input og knappe verdiene
+            var input = document.querySelector('.screen');
+            var inputVal = input.innerHTML;
+            var btnVal = this.innerHTML;
+            /*nå skal vi legge til de sentrale verdiene (btnValue),
+             til ingangen streng og til slutt bruke JavaScript eval-funcsonen for og få resultatet*/
+            // viss clear knappen klikes, skal alt forsvine
+            if(btnVal == 'C') {
+                input.innerHTML = '';
+                decimalAdded = false
+            }
+            /*viss erlik knapen (eval key) klikkes, skal regnestyket utføres og resultatet skal vises*/
+            else if(btnVal == '=') {
+                var equation = inputVal;
+                var lastChar = equation[equation.length - 1];
+
+            /*erstat alle forelkomster av x med * dette kan gjøres enkelt ved og bruke regex og "g" tag som vil erstatte alle forekomster av den matchede karakter/substring*/
+             equation = equation.replace(/x/g, '*');
+            /*så skal vi skjekke det siste tegnet av ligningen (equation). viss det er en operatør eller desimal, fjerner vi det*/
+
+            if(operators.indexOf(lastChar) > -1 || lastChar == '.')
+                equation = equation.replace(/.$/, '')
+
+                    if(equation)
+                    input.innerHTML = eval(equation);
+                    decimalAdded = false;
+            }
+
+            /*Grunnlegende funcsonlalitet i kalkulator er fullført. men det er noen problemer som 
+            1. ingen to operatører bør leges fortløpende
+            2. ligningen bør ikke starte fra en operatør, unntatt minus
+            3. Ikke mer enn en desimal skal være der i et antall*/
+
+            // vi skal løse disse problemene ved hjelp av noen enkle kontroller
+
+            //indexOf virker bare i IE9+
+
+            else if(operators.indexOf(btnVal) > -1) {
+                //opratør er klikket på det siste tegnet som ligningen
+                var lastChar = inputVal[inputVal.length - 1];
+
+                /*bare legge til operatøren viss ingangen ikke er tom, og det er ingen opratører i siste ledd*/
+
+                if(inputVal != '' && operators.indexOf(lastChar) == -1)
+                input.innerHTML += btnVal;
+                
+                /*tilat minus visss strengne er tom*/
+                else if(inputVal == '' && btnVal == '-')
+                    input.innerHTML += btnVal;
+                /*sett på siste operatøren(hvis det finnes) med den nylig presset operatør*/
+                if(operators.indexOf(lastChar) > -1 && inputVal.length > 1) {
+
+                    input.innerHTML = inputVal.replace(/.$/, btnVal);
+                }
+                decimalAdded = false;
+            }
+
+                else if(btnVal == '.') {
+                    if(!decimalAdded) {
+                        input.innerHTML += btnVal;
+                        decimalAdded = true;
+                    }
+                }
+
+                else {
+                    input.innerHTML += btnVal;
+                }
+                e.preventDefault();
+            }
+    }
+    
+
+</script>
+</html>
