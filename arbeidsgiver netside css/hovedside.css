@@ -1,0 +1,73 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+
+nav ul {
+    list-style: none; /*fjerner punkter i listen*/
+    position: relative;
+    display: inline-block;  /*skal holde seg til venstre*/
+    width: 40%; /*bestemmer breden på nav*/
+    margin-left: 10%;
+    left: 15%;
+}
+
+nav ul ul ul {
+    top: 0;
+    margin-left: 120%;
+}
+
+nav ul ul ul li {
+    right: 10%;
+}
+
+nav ul li {
+    display: block;
+    position: relative; /*gjør at under menyene kommer redt under menyen.*/
+    float: left;
+    margin: 1%;
+    padding-left: 3%;
+    border: 0;
+}
+
+nav ul li a {
+    background: #0000FF;
+    border-radius: 15px;
+    transition: background-color 0.5s, height 2s;
+}
+
+nav ul a {
+    display: block;
+    color: white;
+    text-decoration: none; /*tar bordt strekene under linkene*/
+    line-height: 150%;
+    text-align: center;
+    word-spacing: 1px;
+    width: 160px;
+    padding: 4%;
+    box-shadow: 5px 3px gray;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute; /*dene fører til at under menyen kommer redt under.*/
+    left: 0;
+    padding: 0;
+}
+
+nav ul li:hover > ul {
+    display: block;
+    width: 120%;
+}
+
+nav ul li a:hover {
+    background-color: #f00;
+}
+

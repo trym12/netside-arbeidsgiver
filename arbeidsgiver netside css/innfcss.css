@@ -1,0 +1,95 @@
+body {
+    background-color: #000;
+    font-family: Arial, sans-serif; 
+    font-size: 12pt; 
+    color: #fff;
+    font-size: 120%;
+	text-align: left; 
+    padding-left: 2%;
+    width: 94%; 
+ 
+}
+
+article	{
+	width: 64%;
+	height: auto;
+	float: left;
+	clear: left;
+	background-color: #880000;
+	border-radius: 15px;
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-bottom:25px;
+	border: solid #fff;
+	padding: 15px;
+	font-size: 12pt;
+	font-weight: bold;
+        
+}
+ 
+ 
+aside {
+	width: 26%; 
+	height: 2100px;
+	float: right;
+	background-color: #FFFFFF;
+	border-radius: 15px;
+	border: solid #fff;
+	margin-top: 20px;
+	margin-left: 5px;
+	margin-bottom:25px;
+	padding: 15px;
+	text-align: center;
+}
+h1	{
+	font-style: italic;
+    text-align: center;
+    border-bottom: 3px double #FFF;
+}
+
+h2	{
+	text-align: center;
+	margin-top: 65px;
+	color: #00Bfff;
+}
+ 
+h3	{
+	text-align: left;
+	margin-top: 65px;
+	color: #00B0FF;
+}
+
+.innrykk {
+	margin: 45px 65px 45px;
+	line-height: 30px; 
+/*	margin-top: 75px;
+	margin-left: 65px;
+	margin-bottom: 45px;*/
+}
+
+.inn2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	line-height: 30px; 
+}
+
+.biltekst {
+	color: #0000FF;
+	
+}
+img {   
+	border-radius: 5px;
+	width: 90%;
+	display: block;
+	margin: auto;
+	
+	padding: 4%;
+	border-style: solid;
+	border-color: 2px #990000;
+	box-shadow:10px 10px 10px Gray;
+	-webkit-box-shadow:10px 10px 10px Gray;
+	-moz-box-shadow: 10px 10px 10px Gray;
+	/*float; center;
+	padding: 4px;*/
+}
+
