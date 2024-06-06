@@ -1,0 +1,119 @@
+/*calculator*/
+
+/*bruker box shodow til å lage 3D efekt*/
+
+#calculator {
+    width: 310px;
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+    background-color: #0000FF;
+    border-radius: 3px;
+    box-shadow: 0px 4px #009de4, 0px 10px 15px #00000033;
+}
+
+/*Top portion*/
+.top span.clear {
+    float: right;
+}
+
+/*insert shadow on the screen to create indent*/
+.top .screen {
+    height: 52px;
+    width: 290px;
+    float: left;
+    padding: 0 10px;
+    background: #000;
+    border-radius: 21px;
+    box-shadow: inset 0px 4px #00000033;
+    /*typografy*/
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 48px;
+    color: aquamarine;
+    text-shadow: 1px 1px 2px #00000033;
+}
+
+/*Clear floate*/
+.kyes,.top {overflow: hidden;}
+
+/*aplayng same to the kyes*/
+.kyes span, span.clear {
+    float: left;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    width: 66px;
+    height: 36px;
+    
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0px 4px #696969;
+    margin: 0 7px 11px 2px;
+    font-weight: bolder;
+    color: #000000;
+    line-height: 36px;
+    text-align: center;
+    /*prevent selection of text inside kyes*/
+    user-select: none;
+    /*smoothing out hover and active stats using css3 transisjon*/
+    transform: all 0.2s ease;
+}
+
+/*remove right margins from operators keys*/
+/*style diffrent type of keys (operators/evaluate/clrear) diffrently*/
+.kyes span.operator {
+    background: #7fff00;
+    margin-right: 0;
+    box-shadow: 0px 4px #696969;
+}
+
+.kyes span.eval {
+    background: #ffff00;
+    box-shadow: 0px 4px #696969;
+    color: #888e5f;
+}
+
+span.clear {
+    background: #ff0000;
+    box-shadow: 0px 4px #696969;
+    color: white;
+    float: right;
+    margin-right: 0;
+}
+
+/*some hover effects*/
+.kyes span:hover {
+    background: #9c89f6;
+    box-shadow: #6b54d3;
+    color: white;
+}
+
+.kyes span.eval:hover {
+    background: #abb850;
+    border: 0px 4px #717a33;
+    color: #ffffff;
+}
+
+.top span.clear:hover {
+    background: #f68991;
+    box-shadow: 0px 4px #d3545d;
+    color: #ffffff;
+}
+
+/*simulating "pressed" effect on active state of the keys by removing box-shadow and moving the keys down a bit.*/
+
+.kyes span:active {
+    box-shadow: 0px 0px #6b54d3;
+    top: 4px;
+}
+
+.kyes span.eval:active {
+    box-shadow: 0px 0px #717a33;
+    top: 4px;
+}
+
+.top span.clear:active {
+    top: 4px;
+    box-shadow: 0px 0px #d3545d;
+}
