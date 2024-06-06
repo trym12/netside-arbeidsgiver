@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+   
+    <title>enkel klokke</title>
+</head>
+<body><h1>Enkel klokke</h1>
+    <nav>
+        <ul><li><a href="../omMegArbeidsgiver.html">Om meg</a></li>
+            <li><a href="">Informasjons Teknologi</a>
+                <ul>
+                    <li><a href="">programering</a>
+                        <ul>
+                        
+                            <li><a href="">JavaScript</a>
+                                <ul>
+                                    <li><a href="vareabler">Vareabler</a>
+                                        <ul>
+                                            <li><a href="./variabler.html">Variabel forklaring</a></li>
+                                            <li><a href="./variabel2.html">Variabel oppgave</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><a href="datastrukturer">Datastruktur</a>
+                                    <ul>
+                                            <li><a href="./12datastructur.html">Datastruktur og Array</a></li>
+                                            <li><a href="./13datastrukturer2dimArray - Copy.html">2Dim array</a></li>
+                                        </ul>
+                                    </li>
+                            
+                                    <li><a href="kontrollmekanismer">kontrollmekanismer</a><ul>
+                                            <li ><a href="./14If-Test.html">If Test</a></li>
+                                            <li ><a href="./15-switch.html">switch</a></li>
+                                        </ul>
+                                        </li>
+                                    
+                                    <li><a href="løkker">løkker</a>
+                                        <ul><li><a href="./8FORlokke.html">for-løkke</a></li>
+                                            <li><a href="./9whilelokke.html">while løkke</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="kalkulatorer">kalkulatorer</a>
+                                        <ul><li><a href="./11calculator.html">vanli kalkulator</a></li>
+                                            <li><a href="./10calc.html">enkel kalkulator</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./16-klokke.html">Lett klokke</a></li>
+                                    <li><a href="./funksjon-parameter.html">Funksjoner</a></li>
+                                    <li><a href="./16-Event.html">Events</a>
+                                        <ul><li><a href="./17-registrere.html">Register-skjema</a></li></ul>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Teknologi Forståelse</a>
+                        <ul>
+                            <li><a href="../aiBilder.html">AI-Bilder</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Medie Produksjon</a>
+                <ul>
+                    <li><a href="">Konsept Utvikling</a>
+                        <ul>
+                            <li><a href="../appdesign_oppgaven.html">Appdesign</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Produksjon og historiefortelling</a>
+                        <ul>
+                            <li><a href="../anematronics_oppgave.html">Anamatroniks</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../index.html">Hjem</a></li>
+        </ul>
+    </nav>
+    <div id="klokke"></div>
+    <script>function visTid(){
+        let naa = new Date();
+        let tid = naa.toLocaleTimeString();
+        document.getElementById("klokke").innerHTML = tid;
+    //console.Log(tid);
+    }
+    //visTid();
+    setInterval(visTid,100);
+    </script>
+</body>
+</html>

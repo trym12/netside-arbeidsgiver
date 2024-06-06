@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if-test</title>
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+  
+
+</head>
+
+<body>
+    <h1>if-test</h1>
+    <nav>
+        <ul><li><a href="../omMegArbeidsgiver.html">Om meg</a></li>
+            <li><a href="">Informasjons Teknologi</a>
+                <ul>
+                    <li><a href="">programering</a>
+                        <ul>
+                        
+                            <li><a href="">JavaScript</a>
+                                <ul>
+                                    <li><a href="vareabler">Vareabler</a>
+                                        <ul>
+                                            <li><a href="./variabler.html">Variabel forklaring</a></li>
+                                            <li><a href="./variabel2.html">Variabel oppgave</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><a href="datastrukturer">Datastruktur</a>
+                                    <ul>
+                                            <li><a href="./12datastructur.html">Datastruktur og Array</a></li>
+                                            <li><a href="./13datastrukturer2dimArray - Copy.html">2Dim array</a></li>
+                                        </ul>
+                                    </li>
+                            
+                                    <li><a href="kontrollmekanismer">kontrollmekanismer</a><ul>
+                                            <li ><a href="./14If-Test.html">If Test</a></li>
+                                            <li ><a href="./15-switch.html">switch</a></li>
+                                        </ul>
+                                        </li>
+                                    
+                                    <li><a href="løkker">løkker</a>
+                                        <ul><li><a href="./8FORlokke.html">for-løkke</a></li>
+                                            <li><a href="./9whilelokke.html">while løkke</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="kalkulatorer">kalkulatorer</a>
+                                        <ul><li><a href="./11calculator.html">vanli kalkulator</a></li>
+                                            <li><a href="./10calc.html">enkel kalkulator</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./16-klokke.html">Lett klokke</a></li>
+                                    <li><a href="./funksjon-parameter.html">Funksjoner</a></li>
+                                    <li><a href="./16-Event.html">Events</a>
+                                        <ul><li><a href="./17-registrere.html">Register-skjema</a></li></ul>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Teknologi Forståelse</a>
+                        <ul>
+                            <li><a href="../aiBilder.html">AI-Bilder</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Medie Produksjon</a>
+                <ul>
+                    <li><a href="">Konsept Utvikling</a>
+                        <ul>
+                            <li><a href="../appdesign_oppgaven.html">Appdesign</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Produksjon og historiefortelling</a>
+                        <ul>
+                            <li><a href="../anematronics_oppgave.html">Anamatroniks</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../index.html">Hjem</a></li>
+        </ul>
+    </nav>
+    <p>Alle programsspråk har en grunlegende funconalitet. Et eksempel på dette er såkalte kontrollstrukturer.</p>
+    <p>disse er if, for. while, switch og do.</p>
+    <p>et datta program må i magne tilfeller skjekke om noe er sant eller  ikke. 
+        Det kan være om et passord stemmer med det som er oppgitt eller ikke, f.eks.i AD(Active Dirrctory).
+    </p>
+    <p>for treningerns skyld og for og lære, skal vi sjekke brukernanvn, passord, passordbekreftelse og alder med java script.</p>
+    <p>da må vi lage først to felt, der vi kan fylle inn brukernanvn og passord. 
+        så må vi ha et felt for passordbekreftelse og et felt for alder. det etter lager vi en knapp for registrering. 
+        Vi kan også lage en "Clear-knapp" som skal tømme feltene.
+    </p>
+    <p>når vi klikker på registrerings kanappen skal funksjonen registrer() skjøre. så skal alle infylte data skrives ut på siden.
+    </p>
+    <p>For det første feltet med brukernanvn benytter vi if deretter benytter vi else if for passord, passordbekreftelse og alder, 
+        for og kjekke om feltene er fylt ut.</p>
+    <p>deretter skal vi benytte if for og skjekke om passordet har mer enn 7 tegn.</p>
+    <p>så må vi skjekke om passordne er like.</p>
+    <p>Så skjekker vi om alder er strørre enn 18 år</p>
+
+    <div id="userpass"></div>
+    <form class="innrykk" action="">
+        <input type="text" id="fnavn" name="Fornavn" placeholder="Skriv in ditt fornavn"><br>
+        <input type="text" id="enavn" name="Etternavn" placeholder="Skriv in ditt etternavn"><br>
+        <input type="text" id="user1" name="Brukernavn" placeholder="Skriv in ditt brukernavn"><br>
+        <input type="password" id="passw1" name="Username" placeholder="Skriv in ditt passord"><br>
+        <input type="password" id="passw2" name="Username" placeholder="Gjenta ditt passord"><br>
+        <input type="text" id="alder1" name="Username" placeholder="Skriv inn din alder"><br>
+        <br>
+        <button onclick="compute(form)" type="reset">clear</button>
+    </form>
+
+<button value="" onclick="registrer()">register deg</button>
+<br>
+<div id="reg"></div>
+
+</body>
+<script>
+    //Først lager vi farge som skal visses i feltene
+    fnavn.onfocus = focusfnavn;
+    enavn.onfocus = focusenavn;
+    user1.onfocus = focususer1;
+    passw1.onfocus = focuspassw1;
+    passw2.onfocus = focuspassw2;
+    alder1.onfocus = focusalder1;
+
+    function focusfnavn() {
+        fnavn.style.backgroundColor = "yellow";
+        this.placeholder = "Fornavn"
+    }
+
+    function focusenavn() {
+        enavn.style.backgroundColor = "yellow";
+        this.placeholder = "Etternavn"
+    }
+    function focususer1() {
+        user1.style.backgroundColor = "yellow";
+        this.placeholder = "Brukernavn"
+    }
+    function focuspassw1() {
+        passw1.style.backgroundColor = "yellow";
+        this.placeholder = "Passord"
+    }
+    function focuspassw2() {
+        passw2.style.backgroundColor = "yellow";
+        this.placeholder = "Gjenta Passord"
+    }
+    function focusalder1() {
+        alder1.style.backgroundColor = "yellow";
+        this.placeholder = "Skriv inn din alder"
+    }
+//skjekker om skjema er korrekt fylt ut
+function registrer() {
+    let fnavn = document.getElementById("fnavn").value;
+    let enavn = document.getElementById("enavn").value;
+    let user1 = document.getElementById("user1").value;
+    let passw1 = document.getElementById("passw1").value;
+    let passw2 = document.getElementById("passw2").value;
+    let alder1 = document.getElementById("alder1").value;
+    let eAlder = parseInt(alder1);
+
+    //skjekker om brukernavn er tomt
+
+    if(user1 =="") {
+        alert("Du må fylle in brukernavn")
+        return false;
+    }
+    else if(passw1 =="") {
+        alert("Må skrive et passord")
+        return false;
+    }
+    else if(passw2 =="") {
+        alert("Må bekrefte passord")
+        return false;
+    }
+    else if(alder1 =="") {
+        alert("Du må skrive hvor ung du er")
+        return false;
+    }
+    else if(passw1.length <= 7 ) {
+        alert("passordet skal være lengere en 7 karakterer")
+        return false;
+    }
+    else if(passw2 != passw1 ) {
+        alert("passordene er ulike")
+        return false;
+    }
+    else  if(eAlder <18) {
+        alert(" Du er for ung for dene siden")
+        return false;
+    }
+    else {
+        reg.innerHTML += ("Kjære " + fnavn + " " + enavn + "," + "du er nå registrert og vil høre mer fra politiet og barnevernet!");
+    }
+}
+</script>
+</html>

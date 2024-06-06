@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enkel kalkulator</title>
+    <link rel="stylesheet" href="../arbeidsgiver netside css/hovedside.css">
+
+
+</head>
+<body>
+    <h1>Enkel Kalkulator</h1>
+    <nav>
+        <ul><li><a href="../omMegArbeidsgiver.html">Om meg</a></li>
+            <li><a href="">Informasjons Teknologi</a>
+                <ul>
+                    <li><a href="">programering</a>
+                        <ul>
+                        
+                            <li><a href="">JavaScript</a>
+                                <ul>
+                                    <li><a href="vareabler">Vareabler</a>
+                                        <ul>
+                                            <li><a href="./variabler.html">Variabel forklaring</a></li>
+                                            <li><a href="./variabel2.html">Variabel oppgave</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li><a href="datastrukturer">Datastruktur</a>
+                                    <ul>
+                                            <li><a href="./12datastructur.html">Datastruktur og Array</a></li>
+                                            <li><a href="./13datastrukturer2dimArray - Copy.html">2Dim array</a></li>
+                                        </ul>
+                                    </li>
+                            
+                                    <li><a href="kontrollmekanismer">kontrollmekanismer</a><ul>
+                                            <li ><a href="./14If-Test.html">If Test</a></li>
+                                            <li ><a href="./15-switch.html">switch</a></li>
+                                        </ul>
+                                        </li>
+                                    
+                                    <li><a href="løkker">løkker</a>
+                                        <ul><li><a href="./8FORlokke.html">for-løkke</a></li>
+                                            <li><a href="./9whilelokke.html">while løkke</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="kalkulatorer">kalkulatorer</a>
+                                        <ul><li><a href="./11calculator.html">vanli kalkulator</a></li>
+                                            <li><a href="./10calc.html">enkel kalkulator</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="./16-klokke.html">Lett klokke</a></li>
+                                    <li><a href="./funksjon-parameter.html">Funksjoner</a></li>
+                                    <li><a href="./16-Event.html">Events</a>
+                                        <ul><li><a href="./17-registrere.html">Register-skjema</a></li></ul>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">Teknologi Forståelse</a>
+                        <ul>
+                            <li><a href="../aiBilder.html">AI-Bilder</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Medie Produksjon</a>
+                <ul>
+                    <li><a href="">Konsept Utvikling</a>
+                        <ul>
+                            <li><a href="../appdesign_oppgaven.html">Appdesign</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Produksjon og historiefortelling</a>
+                        <ul>
+                            <li><a href="../anematronics_oppgave.html">Anamatroniks</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="../index.html">Hjem</a></li>
+        </ul>
+    </nav>
+        <form action="">
+        tall1: <input type="number" id="tall1"> <br>
+        tall2: <input type="number" id="tall2"> <br>
+        <button onclick = "beregn()">Beregn</button>
+    </form>
+    <!--enkel kalkulator 2-->
+    <h3>skriv inn to tall og klikk på en knapp nedenfor</h3>
+    <input type="text" id="x" placeholder="skriv inn et tall">
+    <input type="text" id="y" placeholder="skriv inn et tall">
+    <button onclick = "sum()">Summere</button>
+    <button onclick = "minus()">Minus</button>
+    <button onclick = "dele()">Dele</button>
+    <button onclick = "gange()">Gange</button>
+
+    <div id="z"></div>
+
+</body>
+<script>
+    function beregn() {
+    var tall1 = Number(document.getElementById("tall1").value);
+    var tall2 = Number(document.getElementById("tall2").value);
+
+    var sum = tall1 + tall2;
+    var prod = tall1 * tall2;
+    var dif = tall1 - tall2;
+    var kvot = tall1 / tall2;
+    alert('summen er:' + sum + 'productet er: ' + prod + ' differansen er:' + dif + ' kvotienten er:' + kvot)
+    }
+
+
+    //enkel kalkulator 2
+    var x, y, resultat;
+    // her lager vi en function for og hente in de to tallene
+    function settverdi() {
+    x = Number(document.getElementById("x").value);
+    y = Number(document.getElementById("y").value);
+    }
+
+    //her lager vi en functioton som sumerer tallene
+    function sum() {
+        settverdi();
+        resultat = x + y;
+        z.innerHTML += "summen er:" + resultat + "<br>";
+    }
+    //lage en function som trekker fra y verdien
+    function minus() {
+        settverdi();
+        resultat = x - y;
+        z.innerHTML += "summen er:" + resultat + "<br>";
+    }
+    //her lager vi en function som ganger de to tallene
+    function gange() {
+        settverdi();
+        resultat = x * y;
+        z.innerHTML += "summen er:" + resultat + "<br>";
+    }
+    //her laget vi en function for og dele
+    function dele() {
+        settverdi();
+        resultat = x / y;
+        z.innerHTML += "summen er:" + resultat + "<br>";
+    }
+
+
+</script>
+</html>
